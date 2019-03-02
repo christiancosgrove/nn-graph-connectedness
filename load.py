@@ -19,3 +19,15 @@ def load_data(file):
     y = np.zeros(g)
     y[dat[:, e] == 'Y'] = 1
     return x,y
+
+def load_splits(file, train_examples):
+
+    x, y = load_data(file)
+
+    print(x.shape[0])
+    train_indices = np.random.choice(x.shape[0], size=train_examples, replace=False)
+
+    test_indices = np.ones(x.shape[0], dtype=np.bool)
+    test_indices[train_indices] = False
+
+    return x[train_indices], y[train_indices], x[test_indices], y[test_indices]
