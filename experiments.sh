@@ -1,10 +1,10 @@
 REPEATS=5
 EPOCHS=1000
-INPUT='./data/graphs5.txt'
-OUTPUT='train_graphs5.txt'
+INPUT='./data/graphs6.txt'
+OUTPUT='train_graphs6.txt'
 
 
-rm train_graphs5.txt
+# rm train_graphs5.txt
 
 for ex in $(seq 2 2 9; seq 10 20 100; seq 100 50 300; seq 300 100 1000)
 do

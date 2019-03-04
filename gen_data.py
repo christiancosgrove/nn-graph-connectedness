@@ -3,7 +3,6 @@ from torch_geometric.data import Data
 import os
 import numpy as np
 import argparse
-from load import load_splits
 from torch.optim import Adam
 from torch import nn
 from torch.nn import functional as F
